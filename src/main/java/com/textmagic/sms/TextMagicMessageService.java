@@ -421,17 +421,4 @@ public class TextMagicMessageService implements MessageService {
             throw new ServiceTechnicalException(ex.getMessage(), ex);
         }
     }
-
-    public static void main(String [] args){
-        TextMagicMessageService textMagicMessageService = new TextMagicMessageService("infomaker", "Bi2K1xwFdIE8lmU");
-        try {
-            textMagicMessageService.send("Testar med åäö", "46733585378");
-        }
-        catch (ServiceBackendException e) {
-            e.printStackTrace();
-        }
-        catch (ServiceTechnicalException e) {
-            e.printStackTrace();
-        }
-    }
 }
