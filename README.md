@@ -1,4 +1,4 @@
-textmagick
+Textmagic
 ==========
 
-Textmagick sms api
+Textmagic sms api

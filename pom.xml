@@ -20,10 +20,10 @@
     </properties>
 
     <scm>
-        <url>https://github.com/im-fredde/textmagick</url>
-        <connection>scm:git:git://github.com/im-fredde/textmagick.git</connection>
-        <developerConnection>scm:git:git@github.com:im-fredde/textmagick.git</developerConnection>
-      <tag>textmagick-1.0</tag>
+        <url>https://github.com/im-fredde/textmagic</url>
+        <connection>scm:git:git://github.com/im-fredde/textmagic.git</connection>
+        <developerConnection>scm:git:git@github.com:im-fredde/textmagic.git</developerConnection>
+      <tag>HEAD</tag>
   </scm>
 
     <developers>
