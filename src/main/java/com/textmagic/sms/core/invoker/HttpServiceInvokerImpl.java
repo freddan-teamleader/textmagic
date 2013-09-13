@@ -4,13 +4,12 @@ import com.textmagic.sms.util.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.Consts;
+import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
@@ -47,16 +46,15 @@ public class HttpServiceInvokerImpl implements HttpServiceInvoker
     Log log = LogFactory.getLog(HttpServiceInvokerImpl.class);
 
     protected String textMagicUrl = "https://www.textmagic.com/app/api";
-    protected CloseableHttpClient httpclient;
+    protected HttpClient httpclient;
 
 
     /**
-     *  Constructs the invoker and instantiate httpclient as {@link HttpClients}
+     *  Constructs the invoker and instantiate httpclient as {@link HttpClient}
      */
     public HttpServiceInvokerImpl()
     {
-        HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
-        httpclient = httpClientBuilder.build();
+        httpclient = new DefaultHttpClient();
     }
 
 
@@ -85,7 +83,7 @@ public class HttpServiceInvokerImpl implements HttpServiceInvoker
                 log.debug(logStr);
             }
 
-            CloseableHttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpclient.execute(httpPost);
             int statusCode = response.getStatusLine().getStatusCode();
 
 
