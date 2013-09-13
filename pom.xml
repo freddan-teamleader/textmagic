@@ -8,7 +8,7 @@
     <groupId>com.textmagic</groupId>
     <artifactId>textmagic</artifactId>
     <packaging>jar</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <name>textmagic</name>
     <url>http://www.textmagic.com/</url>
 
@@ -23,7 +23,7 @@
         <url>https://github.com/im-fredde/textmagick</url>
         <connection>scm:git:git://github.com/im-fredde/textmagick.git</connection>
         <developerConnection>scm:git:git@github.com:im-fredde/textmagick.git</developerConnection>
-      <tag>textmagick-1.0</tag>
+      <tag>textmagic-1.1</tag>
   </scm>
 
     <developers>
